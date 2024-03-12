@@ -75,6 +75,7 @@ const HomepageHeading = ({ mobile }) => {
   useEffect(() => {
     axios.get('http://localhost:3000/doctors')
       .then(response => {
+        console.log(response)
         // Transform response data to match the doctorList structure
         console.log(response)
         const transformedData = response.data.map(doctor => ({
